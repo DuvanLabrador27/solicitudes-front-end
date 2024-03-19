@@ -1,0 +1,19 @@
+<div align="center">
+  <button mat-button [matMenuTriggerFor]="aboveMenu">Employee</button>
+  <mat-menu #aboveMenu="matMenu" yPosition="above">
+    <button mat-menu-item routerLink="employees/listar">Listar</button>
+    <button mat-menu-item>Registrar</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="belowMenu">Users</button>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="beforeMenu">Request Vacation</button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+</div>
