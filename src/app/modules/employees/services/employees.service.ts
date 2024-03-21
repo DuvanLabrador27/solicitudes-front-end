@@ -24,4 +24,30 @@ export class EmployeesService {
     );
   }
 
+  getById(nmIdEmployee:number): Observable<IEmployee> {
+    return this.http.get<IEmployee>(`${this.url}/getEmployee/${nmIdEmployee}`).pipe(
+      tap((response: IEmployee) => console.log(response)),
+      map((response: IEmployee) => response)
+    );
+  }
+
+  add(modelo:IEmployee): Observable<IEmployee> {
+    return this.http.post<IEmployee>(`${this.url}/employeeCreate`, {}).pipe(
+      tap((response: IEmployee) => console.log(response)),
+      map((response: IEmployee) => response)
+    );
+  }
+
+  update(nmIdEmployee:number, modelo:IEmployee): Observable<IEmployee> {
+    return this.http.put<IEmployee>(`${this.url}/employeeUpdate/{employeeId}`, {}).pipe(
+      tap((response: IEmployee) => console.log(response)),
+      map((response: IEmployee) => response)
+    );
+  }
+
+  delete(nnmIdEmployee:number): Observable<void> {
+    return this.http.delete<void>(`${this.url}/employeeDelete/{employeeId}`).pipe(
+    );
+  }
+
 }

@@ -1,0 +1,63 @@
+<table mat-table [dataSource]="dataSources" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- nmIdEmployee Column -->
+    <ng-container matColumnDef="nmIdRequest">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.nmIdRequest}} </td>
+    </ng-container>
+  
+    <!-- dsDocument Column -->
+    <ng-container matColumnDef="nameRequest">
+      <th mat-header-cell *matHeaderCellDef> Request Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.nameRequest}} </td>
+    </ng-container>
+  
+    <!-- dsDocumentType Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+  
+    <!-- dsName Column -->
+    <ng-container matColumnDef="nmNumberOfDaysRequested">
+      <th mat-header-cell *matHeaderCellDef> Number Days Requested </th>
+      <td mat-cell *matCellDef="let element"> {{element.nmNumberOfDaysRequested}} </td>
+    </ng-container>
+
+     <!-- dsName Column -->
+     <ng-container matColumnDef="feStartDate">
+        <th mat-header-cell *matHeaderCellDef> Start Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.feStartDate}} </td>
+      </ng-container>
+
+       <!-- dsName Column -->
+    <ng-container matColumnDef="feEndDate">
+        <th mat-header-cell *matHeaderCellDef> End Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.feEndDate}} </td>
+      </ng-container>
+
+       <!-- dsName Column -->
+    <ng-container matColumnDef="feReinstatementDate">
+        <th mat-header-cell *matHeaderCellDef> Reinstatement Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.feReinstatementDate}} </td>
+      </ng-container>
+
+       <!-- dsName Column -->
+    <ng-container matColumnDef="dsStatus">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element"> {{element.dsStatus}} </td>
+      </ng-container>
+
+       <!-- dsName Column -->
+    <ng-container matColumnDef="feRequestCreation">
+        <th mat-header-cell *matHeaderCellDef> Date Request Creation </th>
+        <td mat-cell *matCellDef="let element"> {{element.feRequestCreation}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+  </table>

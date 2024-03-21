@@ -1,0 +1,25 @@
+.menu-container {
+    background-color: #f0f0f0; 
+    padding: 20px; 
+    overflow: hidden; 
+    
+  }
+  
+  .menu-container img {
+    width: 70px; 
+    height: auto; 
+    float: left; 
+    margin-right: 10px; 
+  }
+  
+  .menu-container .letters-menu {
+    flex: 1;
+    text-align: center; 
+    display: flex;
+    justify-content: space-evenly;
+}
+  
+  .menu-container .letters-menu button {
+    margin-top: 10px; 
+  }
+  

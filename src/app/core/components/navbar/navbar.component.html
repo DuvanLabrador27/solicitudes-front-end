@@ -1,19 +1,19 @@
-<div align="center">
-  <button mat-button [matMenuTriggerFor]="aboveMenu">Employee</button>
-  <mat-menu #aboveMenu="matMenu" yPosition="above">
-    <button mat-menu-item routerLink="employees/listar">Listar</button>
-    <button mat-menu-item>Registrar</button>
-  </mat-menu>
+<div class="menu-container">
+  <img src="assets/bebolder.png">
+  <div class="letters-menu">
 
-  <button mat-button [matMenuTriggerFor]="belowMenu">Users</button>
-  <mat-menu #belowMenu="matMenu" yPosition="below">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-  </mat-menu>
+    <button (click)="redirect('/')"><b>Home</b></button>
 
-  <button mat-button [matMenuTriggerFor]="beforeMenu">Request Vacation</button>
-  <mat-menu #beforeMenu="matMenu" xPosition="before">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-  </mat-menu>
+    <button mat-button [matMenuTriggerFor]="aboveMenu"><b>Employee</b></button>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+      <button (click)="redirect('/employees/list')">List Employee</button><br>
+      <button (click)="redirect('/employees/add')" >Create Employee</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="belowMenu"><b>Users</b></button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button (click)="redirect('/users/list')">List Users</button><br>
+      <button (click)="redirect('/users/add')" >Create Users</button>
+    </mat-menu>
+  </div>
 </div>

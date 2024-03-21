@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 import { IEmployee } from '@data/interfaces/employee.interface';
@@ -10,15 +11,17 @@ import { EmployeesService } from '@modules/employees/services/employees.service'
 })
 export class ListComponent implements OnInit {
 
-  displayedColumns: string[] = ['nmIdEmployee', 'dsDocument', 'dsDocumentType', 'dsName'];
+  displayedColumns: string[] = ['nmIdEmployee', 'dsDocument', 'dsDocumentType', 'dsName', 'dsLastname', 'actions'];
   dataSources: IEmployee[] = [];
 
   constructor(
-    private employeesService: EmployeesService
+    private employeesService: EmployeesService,
+    private router: Router
   ) { }
 
   ngOnInit() {
     this.getEmployees();
+    
   }
 
   private getEmployees() {
@@ -26,6 +29,9 @@ export class ListComponent implements OnInit {
       .subscribe((employees: IEmployee[]) => {
         this.dataSources = employees;
       });
+  }
+  public redirectToDeteailEmployee = (idEmployee: number) => {
+    this.router.navigate(['/employees/detail/', idEmployee]);
   }
   
 }
