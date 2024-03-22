@@ -1,1 +1,31 @@
-<p>add works!</p>
+
+<div class="form-container">
+    <form class="example-form" (ngSubmit)="addUser()" autocomplete="off">
+        <mat-form-field class="example-full-width">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" [(ngModel)]="newUsers.dsUsername" name="dsUsername" required>
+          </mat-form-field>
+      
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="Password" [(ngModel)]="newUsers.dsPassword" name="dsPassword" required>
+          </mat-form-field>
+      
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Email" [(ngModel)]="newUsers.dsEmail" name="dsEmail" required>
+          </mat-form-field>
+      
+          <mat-form-field class="example-full-width">
+            <mat-label>User Status</mat-label>
+            <input matInput placeholder="User Status" [(ngModel)]="newUsers.dsUserStatus" name="dsUserStatus" required>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Employee ID</mat-label>
+            <input matInput placeholder="Employee ID" [(ngModel)]="idEmployee" name="idEmployee" required>
+          </mat-form-field>
+        
+        <button mat-raised-button color="primary" type="submit">Create User</button>
+    </form>
+</div>

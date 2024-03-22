@@ -1,0 +1,37 @@
+.form-container {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .example-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; 
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .example-half-width {
+    width: calc(50% - 12px); 
+  }
+  
+  .mat-form-field {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin-top: 20px;
+    align-self: flex-end;
+  }
+  

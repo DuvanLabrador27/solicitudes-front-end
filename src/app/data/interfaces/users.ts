@@ -1,8 +1,8 @@
 export interface IUsers {
-    nmIdUser: number;
+    nmIdUser?: number;
     dsUsername: string;
     dsPassword: string;
     dsEmail: string;
     dsUserStatus: string;
-    feUserCreated: any;
+    feUserCreated?: any;
 }

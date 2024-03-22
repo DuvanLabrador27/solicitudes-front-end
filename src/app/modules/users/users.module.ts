@@ -5,6 +5,7 @@ import { UsersRoutingModule } from './users-routing.module';
 
 import { ListComponent } from './pages/list/list.component';
 import { AddComponent } from './pages/add/add.component';
+import { FormsModule } from '@angular/forms';
 
 
 import { SharedModule } from '@shared/shared.module';
@@ -18,7 +19,8 @@ import { SharedModule } from '@shared/shared.module';
   imports: [
     CommonModule,
     UsersRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class UsersModule { }

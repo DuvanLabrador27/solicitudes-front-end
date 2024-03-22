@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 import { RequestVacationRoutingModule } from './request-vacation-routing.module';
 
 import { ListComponent } from './pages/list/list.component';
@@ -18,7 +18,8 @@ import { SharedModule } from '@shared/shared.module';
   imports: [
     CommonModule,
     RequestVacationRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class RequestVacationModule { }

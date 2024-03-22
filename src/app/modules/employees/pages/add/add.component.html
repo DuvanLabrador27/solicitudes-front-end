@@ -1,1 +1,64 @@
-<p>add works!</p>
+<div class="form-container">
+    <form class="example-form" (ngSubmit)="addEmployee()" autocomplete="off">
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Document</mat-label>
+            <input matInput placeholder="1234567895" [(ngModel)]="newEmployee.dsDocument" name="dsDocument" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Document Type</mat-label>
+            <input matInput placeholder="CC / CE / PA" [(ngModel)]="newEmployee.dsDocumentType" name="dsDocumentType"
+                required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Name" [(ngModel)]="newEmployee.dsName" name="dsName" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Lastname</mat-label>
+            <input matInput placeholder="Lastname" [(ngModel)]="newEmployee.dsLastname" name="dsLastname" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Phone Number</mat-label>
+            <input matInput placeholder="834747347" [(ngModel)]="newEmployee.dsPhoneNumber" name="dsPhoneNumber"
+                required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Address</mat-label>
+            <input matInput placeholder="Cll x # y" [(ngModel)]="newEmployee.dsAddress" name="dsAddress" required>
+        </mat-form-field>
+
+        <div class="date-fields-container">
+            <mat-form-field class="example-full-width">
+                <mat-label>Hire Date</mat-label>
+                <input matInput placeholder="(YYYY-MM-DD)" type="text" [(ngModel)]="newEmployee.feHireDate"
+                    name="feHireDate" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Departure Date </mat-label>
+                <input matInput placeholder="(Optional, YYYY-MM-DD)" type="text"
+                    [(ngModel)]="newEmployee.feDepartureDate" name="feDepartureDate">
+            </mat-form-field>
+        </div>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Type Of Contract</mat-label>
+            <input matInput placeholder="Fixed term / Indefinite term / Apprenticeship / OPS "
+                [(ngModel)]="newEmployee.dsTypeOfContract" name="dsTypeOfContract" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Status </mat-label>
+            <input matInput placeholder="Active / Inactive" [(ngModel)]="newEmployee.dsEmployeeStatus"
+                name="dsEmployeeStatus" required>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Add Employee</button>
+    </form>
+</div>

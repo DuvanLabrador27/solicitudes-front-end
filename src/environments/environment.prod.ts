@@ -1,6 +1,6 @@
 const server = {
     protocol: 'http',
-    hostname: '137.184.91.41',
+    hostname: '64.23.166.118',
     port: '8090'
   };
 

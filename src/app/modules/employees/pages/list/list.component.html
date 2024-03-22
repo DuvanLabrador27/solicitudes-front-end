@@ -34,8 +34,20 @@
 
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef> <b>Employee Details</b> </th>
-      <button mat-cell *matCellDef="let element" (click)="redirectToDeteailEmployee(element.nmIdEmployee)">view details</button>
+      <td mat-cell *matCellDef="let element">
+        <button  (click)="redirectToDeteailEmployee(element.nmIdEmployee)">View Details</button>
+      </td>
     </ng-container>
+
+    <ng-container matColumnDef="actionsupd">
+      <th mat-header-cell *matHeaderCellDef> <b>Update Employee</b> </th>
+      <td mat-cell *matCellDef="let element">
+        <button  (click)="redirectToUpdateEmployee(element.nmIdEmployee)">Update</button>
+      </td>
+    </ng-container>
+    
+
+    
     
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

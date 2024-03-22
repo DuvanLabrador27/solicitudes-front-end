@@ -23,10 +23,12 @@ export class UsersService {
     );
   }
 
-  addUser(modelo: IUsers): Observable<IUsers> {
-    return this.http.post<IUsers>(`${this.url}/createUser`, modelo).pipe(
-      tap((response: IUsers) => console.log(response)),
-      map((response: IUsers) => response)
-    );
+  addUser(modelo: IUsers, employeeId: string): Observable<IUsers> {
+    return this.http.post<IUsers>(`${this.url}/createUser`, modelo, { params: { employeeId } })
+      .pipe(
+        tap((response: IUsers) => console.log(response)),
+        map((response: IUsers) => response)
+      );
   }
+
 }

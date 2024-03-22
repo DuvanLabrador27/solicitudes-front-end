@@ -1,1 +1,28 @@
-<p>add works!</p>
+
+<div class="form-container">
+    <form class="example-form" (ngSubmit)="addRequest()" autocomplete="off">
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Request Name</mat-label>
+            <input matInput placeholder="Name Request" [(ngModel)]="newRequest.nameRequest" name="nameRequest" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Description</mat-label>
+            <input matInput placeholder="Description Request" [(ngModel)]="newRequest.description" name="description" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Number of Days Requested</mat-label>
+            <input matInput type="number" placeholder="0" [(ngModel)]="newRequest.nmNumberOfDaysRequested" name="nmNumberOfDaysRequested" >
+        </mat-form-field>
+
+        <div class="date-fields-container">
+            <mat-form-field class="example-full-width">
+                <mat-label>Start Date</mat-label>
+                <input matInput placeholder="(YYYY-MM-DD)" type="text" [(ngModel)]="newRequest.feStartDate" name="feStartDate">
+            </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" type="submit">Create Request</button>
+    </form>
+</div>

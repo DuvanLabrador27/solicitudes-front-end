@@ -24,8 +24,18 @@
     <!-- dsDocumentType Column -->
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef> <b>View Request Vacation</b> </th>
-      <button mat-cell *matCellDef="let element" (click)="redirectToRequestVacation(element.nmIdUser)">Request Vacation</button>
+      <td mat-cell *matCellDef="let element">
+        <button (click)="redirectToRequestVacation(element.nmIdUser)">Request Vacation</button>
+      </td>
     </ng-container>
+    
+    <ng-container matColumnDef="created">
+      <th mat-header-cell *matHeaderCellDef> <b>Create Request Vacation</b> </th>
+      <td mat-cell *matCellDef="let element">
+        <button (click)="redirectToCreateRequestVacation(element.nmIdUser)">Create Request</button>
+      </td>
+    </ng-container>
+    
   
 
   

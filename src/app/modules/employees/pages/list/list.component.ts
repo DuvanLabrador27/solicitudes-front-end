@@ -11,7 +11,7 @@ import { EmployeesService } from '@modules/employees/services/employees.service'
 })
 export class ListComponent implements OnInit {
 
-  displayedColumns: string[] = ['nmIdEmployee', 'dsDocument', 'dsDocumentType', 'dsName', 'dsLastname', 'actions'];
+  displayedColumns: string[] = ['nmIdEmployee', 'dsDocument', 'dsDocumentType', 'dsName', 'dsLastname', 'actions', 'actionsupd'];
   dataSources: IEmployee[] = [];
 
   constructor(
@@ -30,8 +30,13 @@ export class ListComponent implements OnInit {
         this.dataSources = employees;
       });
   }
+
+  
   public redirectToDeteailEmployee = (idEmployee: number) => {
     this.router.navigate(['/employees/detail/', idEmployee]);
+  }
+  public redirectToUpdateEmployee = (idEmployee: number) => {
+    this.router.navigate(['/employees/edit/',idEmployee]);
   }
   
 }

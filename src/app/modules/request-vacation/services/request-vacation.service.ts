@@ -30,8 +30,8 @@ export class RequestVacationService {
     );
   }
 
-  add(modelo: IRequestVacation, nmIdUser: number): Observable<IRequestVacation> {
-    return this.http.post<IRequestVacation>(`${this.url}/createRequest/${nmIdUser}`, modelo).pipe(
+  addRequest(request: IRequestVacation, nmIdUser: number): Observable<IRequestVacation> {
+    return this.http.post<IRequestVacation>(`${this.url}/createRequest/${nmIdUser}`, request).pipe(
       tap((response: IRequestVacation) => console.log(response)),
       map((response: IRequestVacation) => response)
     );

@@ -23,7 +23,7 @@ const routes: Routes = [
     title: 'Crear Empleado'
   },
   {
-    path: 'edit/:id',
+    path: 'edit/:idEmployee',
     component: EditComponent,
     title: 'Editar Empleado'
   },

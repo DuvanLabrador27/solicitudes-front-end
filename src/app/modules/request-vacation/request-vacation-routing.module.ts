@@ -17,15 +17,11 @@ const routes: Routes = [
     title: 'Detalle de solicitud de vacaciones'
   },
   {
-    path: 'add',
+    path: 'add/:idUser',
     component: AddComponent,
     title: 'Crear Solicitud de vacaciones'
-  },
-  {
-    path: '',
-    redirectTo: 'add',
-    pathMatch: 'full'
   }
+
 ];
 
 @NgModule({

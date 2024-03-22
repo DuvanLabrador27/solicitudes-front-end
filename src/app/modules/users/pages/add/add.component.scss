@@ -1,0 +1,23 @@
+.form-container {
+    width: 400px;
+    margin: auto;
+  }
+  
+  .example-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-full-width {
+    margin-bottom: 20px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  button {
+    margin-top: 20px;
+    width: 100%;
+  }
+  

@@ -5,6 +5,8 @@ import { map, tap } from 'rxjs/operators';
 
 import { IEmployee } from '@data/interfaces/employee.interface';
 import { environment } from '@env/environment';
+import { catchError } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
@@ -31,23 +33,28 @@ export class EmployeesService {
     );
   }
 
-  add(modelo:IEmployee): Observable<IEmployee> {
-    return this.http.post<IEmployee>(`${this.url}/employeeCreate`, {}).pipe(
+  addEmployee(employee: IEmployee): Observable<IEmployee> {
+    return this.http.post<IEmployee>(`${this.url}/employeeCreate`, employee).pipe(
       tap((response: IEmployee) => console.log(response)),
-      map((response: IEmployee) => response)
+      catchError((error: any) => {
+        console.error('Error creating employee:', error);
+        throw error; 
+      })
     );
   }
-
-  update(nmIdEmployee:number, modelo:IEmployee): Observable<IEmployee> {
-    return this.http.put<IEmployee>(`${this.url}/employeeUpdate/{employeeId}`, {}).pipe(
+  
+  
+  update(employee: IEmployee, nmIdEmployee: number): Observable<IEmployee> {
+    return this.http.put<IEmployee>(`${this.url}/employeeUpdate/${nmIdEmployee}`, employee).pipe(
       tap((response: IEmployee) => console.log(response)),
-      map((response: IEmployee) => response)
+      catchError((error: any) => {
+        console.error('Error updating employee:', error);
+        throw error; 
+      })
     );
   }
+  
 
-  delete(nnmIdEmployee:number): Observable<void> {
-    return this.http.delete<void>(`${this.url}/employeeDelete/{employeeId}`).pipe(
-    );
-  }
+
 
 }

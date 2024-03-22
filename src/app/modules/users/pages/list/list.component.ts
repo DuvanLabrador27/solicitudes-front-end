@@ -11,12 +11,13 @@ import {UsersService } from '@modules/users/services/users.service';
 })
 export class ListComponent implements OnInit {
 
-  displayedColumns: string[] = ['nmIdUser', 'dsEmail', 'dsUserStatus','actions'];
+  displayedColumns: string[] = ['nmIdUser', 'dsEmail', 'dsUserStatus','actions', 'created'];
   dataSources: IUsers[] = [];
 
   constructor(
     private usersService: UsersService,
-    private router: Router
+    private router: Router,
+    
   ) { }
 
   ngOnInit() {
@@ -32,6 +33,9 @@ export class ListComponent implements OnInit {
 
   public redirectToRequestVacation = (id: number) => {
     this.router.navigate(['/request-vacation/list/', id]);
+  }
+  public redirectToCreateRequestVacation = (idUser: number) => {
+    this.router.navigate(['/request-vacation/add/', idUser]);
   }
   
 }
