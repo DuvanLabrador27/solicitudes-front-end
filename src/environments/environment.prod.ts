@@ -6,7 +6,7 @@ const server = {
 
 export const environment = {
     production: true,
-    baseUrlEmployees: `${server.protocol}://${server.hostname}:${server.port}/api/v1/employees`,
-    baseUrlRequestVacation: `${server.protocol}://${server.hostname}:${server.port}/api/v1/request-vacations`,
-    baseUrlUsers: `${server.protocol}://${server.hostname}:${server.port}/api/v1/users`,
+    baseUrlEmployees: `${server.protocol}://${server.hostname}/api/v1/employees`,
+    baseUrlRequestVacation: `${server.protocol}://${server.hostname}/api/v1/request-vacations`,
+    baseUrlUsers: `${server.protocol}://${server.hostname}/api/v1/users`,
 };
