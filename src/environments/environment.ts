@@ -6,6 +6,7 @@ const server = {
 
 export const environment = {
     production: false,
+    changeOrigin: true,
     baseUrlEmployees: `${server.protocol}://${server.hostname}:${server.port}/api/v1/employees`,
     baseUrlRequestVacation: `${server.protocol}://${server.hostname}:${server.port}/api/v1/request-vacations`,
     baseUrlUsers: `${server.protocol}://${server.hostname}:${server.port}/api/v1/users`,

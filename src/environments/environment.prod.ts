@@ -1,7 +1,7 @@
 const server = {
     protocol: 'http',
     hostname: '64.23.166.118',
-    port: '8090'
+    port: '80'
   };
 
 export const environment = {

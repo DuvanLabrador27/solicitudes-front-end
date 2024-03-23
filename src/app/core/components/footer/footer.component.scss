@@ -1,17 +1,16 @@
 footer {
-    display: flex;
-    gap: 10px;
-    gap: 10px;
+  
     bottom: 0;
     left: 0;
     width: 100%;
+    display: flex;
+    gap: 10px;
     justify-content: center;
-    background-color: #f0f0f0; 
-   
-    
+    background-color: #f0f0f0;
+    padding: 10px; 
+    box-sizing: border-box;
 }
 
 footer p {
-    margin: 10px;
-    
+    margin: 0 10px;
 }

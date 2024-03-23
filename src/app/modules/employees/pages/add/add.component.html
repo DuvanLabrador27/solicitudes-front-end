@@ -8,9 +8,13 @@
 
         <mat-form-field class="example-full-width">
             <mat-label>Document Type</mat-label>
-            <input matInput placeholder="CC / CE / PA" [(ngModel)]="newEmployee.dsDocumentType" name="dsDocumentType"
-                required>
+            <mat-select placeholder="Select Document Type" [(ngModel)]="newEmployee.dsDocumentType" name="dsDocumentType" required>
+                <mat-option value="CC">CC</mat-option>
+                <mat-option value="CE">CE</mat-option>
+                <mat-option value="PA">PA</mat-option>
+            </mat-select>
         </mat-form-field>
+        
 
         <mat-form-field class="example-full-width">
             <mat-label>Name</mat-label>
@@ -49,15 +53,23 @@
 
         <mat-form-field class="example-full-width">
             <mat-label>Type Of Contract</mat-label>
-            <input matInput placeholder="Fixed term / Indefinite term / Apprenticeship / OPS "
-                [(ngModel)]="newEmployee.dsTypeOfContract" name="dsTypeOfContract" required>
+            <mat-select placeholder="Select Contract Type" [(ngModel)]="newEmployee.dsTypeOfContract" name="dsTypeOfContract" required>
+                <mat-option value="FIXED_TERM">Fixed term</mat-option>
+                <mat-option value="INDEFINITE_TERM">Indefinite term</mat-option>
+                <mat-option value="APPRENTICESHIP">Apprenticeship</mat-option>
+                <mat-option value="OPS">OPS</mat-option>
+            </mat-select>
         </mat-form-field>
+        
 
         <mat-form-field class="example-full-width">
-            <mat-label>Status </mat-label>
-            <input matInput placeholder="Active / Inactive" [(ngModel)]="newEmployee.dsEmployeeStatus"
-                name="dsEmployeeStatus" required>
+            <mat-label>Status</mat-label>
+            <mat-select placeholder="Select Employee Status" [(ngModel)]="newEmployee.dsEmployeeStatus" name="dsEmployeeStatus" required>
+                <mat-option value="ACTIVE">Active</mat-option>
+                <mat-option value="INACTIVE">Inactive</mat-option>
+            </mat-select>
         </mat-form-field>
+        
 
         <button mat-raised-button color="primary" type="submit">Add Employee</button>
     </form>
